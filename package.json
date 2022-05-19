@@ -1,0 +1,14 @@
+{
+  "name": "uniswap-v3-staker-subgraph",
+  "license": "MIT",
+  "scripts": {
+    "deploy:mainnet": "graph deploy --access-token 27cc2a4d7efd454d8ca9dd6a95eac81d --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ -- dragondmoney/wtpokt_staking ./subgraph-mainnet.yaml",
+    "codegen:mainnet": "graph codegen -- subgraph-mainnet.yaml",
+    "build:mainnet": "graph build -- subgraph-mainnet.yaml"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.20.1",
+    "@graphprotocol/graph-ts": "0.20.1",
+    "assemblyscript": "^0.20.6"
+  }
+}

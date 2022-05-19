@@ -1,0 +1,23 @@
+type Incentive @entity {
+  id: ID!
+  rewardToken: Bytes!
+  pool: Bytes!
+  startTime: BigInt!
+  endTime: BigInt!
+  refundee: Bytes!
+  reward: BigInt!
+  ended: Boolean!
+}
+
+type Position @entity {
+  id: ID!
+  tokenId: BigInt!
+  owner: Bytes!
+  staked: Boolean!
+  oldOwner: Bytes
+  liquidity: BigInt!
+  approved: Bytes
+  state: String
+  incentiveId: Bytes
+  timestamp: BigInt!
+}
